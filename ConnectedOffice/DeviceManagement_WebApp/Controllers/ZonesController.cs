@@ -22,12 +22,14 @@ namespace DeviceManagement_WebApp.Controllers
             _zoneRepository = zoneRepository;
         }
 
+        // Get and display all the zones details
         // GET: Zones
         public async Task<IActionResult> Index()
         {
             return View(_zoneRepository.GetAll());
         }
 
+        // Get and display Zone details based on ZoneID
         // GET: Zones/Details/5
         public async Task<IActionResult> Details(Guid? id)
         {
@@ -51,6 +53,7 @@ namespace DeviceManagement_WebApp.Controllers
             return View();
         }
 
+        // Creating Zone record
         // POST: Zones/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -64,6 +67,7 @@ namespace DeviceManagement_WebApp.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        // Get and display Zone details based on ZoneID that to be edited
         // GET: Zones/Edit/5
         public async Task<IActionResult> Edit(Guid? id)
         {
@@ -80,6 +84,7 @@ namespace DeviceManagement_WebApp.Controllers
             return View(zone);
         }
 
+        // Edit Zone details based on ZoneID
         // POST: Zones/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -111,6 +116,7 @@ namespace DeviceManagement_WebApp.Controllers
 
         }
 
+        // Get and display Zone that will be deleted based on ZoneID
         // GET: Zones/Delete/5
         public async Task<IActionResult> Delete(Guid? id)
         {
@@ -128,6 +134,7 @@ namespace DeviceManagement_WebApp.Controllers
             return View(zone);
         }
 
+        // Delete Zone based on ZoneID
         // POST: Zones/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -137,6 +144,7 @@ namespace DeviceManagement_WebApp.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        // Check whether the inserted id exist in the Zone table
         private bool ZoneExists(Guid id)
         {
             return _zoneRepository.Exists(id);

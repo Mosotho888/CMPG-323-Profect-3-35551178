@@ -20,7 +20,7 @@ namespace DeviceManagement_WebApp.Controllers
             _deviceRepository = deviceRepository;
         }
 
-        // Get and display all the devices information
+        // Get and display all the devices details
         // GET: Devices
         public async Task<IActionResult> Index()
         {
@@ -53,6 +53,7 @@ namespace DeviceManagement_WebApp.Controllers
             return View();
         }
 
+        // Creating Device record
         // POST: Devices/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -68,6 +69,7 @@ namespace DeviceManagement_WebApp.Controllers
 
         }
 
+        // Get and display Device details based on DeviceID that to be edited
         // GET: Devices/Edit/5
         public async Task<IActionResult> Edit(Guid? id)
         {
@@ -86,6 +88,7 @@ namespace DeviceManagement_WebApp.Controllers
             return View(device);
         }
 
+        // Edit Device details based on DeviceID
         // POST: Devices/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -116,6 +119,7 @@ namespace DeviceManagement_WebApp.Controllers
 
         }
 
+        // Get and display Device that will be deleted based on DeviceID
         // GET: Devices/Delete/5
         public async Task<IActionResult> Delete(Guid? id)
         {
@@ -133,6 +137,7 @@ namespace DeviceManagement_WebApp.Controllers
             return View(device);
         }
 
+        // Delete Device based on DeviceID
         // POST: Devices/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -142,6 +147,7 @@ namespace DeviceManagement_WebApp.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        // Check whether the inserted id exist in the Device table
         private bool DeviceExists(Guid id)
         {
             return _deviceRepository.Exists(id);

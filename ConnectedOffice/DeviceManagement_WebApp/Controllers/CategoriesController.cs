@@ -20,12 +20,14 @@ namespace DeviceManagement_WebApp.Controllers
             _categoryRepository = categoryRepository;
         }
 
+        // Get and display all the devices information
         // GET: Categories
         public async Task<IActionResult> Index()
         {
             return View(_categoryRepository.GetAll());
         }
 
+        // Get and display Category details based on CategoryID
         // GET: Categories/Details/5
         public async Task<IActionResult> Details(Guid? id)
         {
@@ -50,6 +52,7 @@ namespace DeviceManagement_WebApp.Controllers
             return View();
         }
 
+        // Creating Category record
         // POST: Categories/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -61,6 +64,7 @@ namespace DeviceManagement_WebApp.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        // Get and display Category details based on CategoryID that to be edited 
         // GET: Categories/Edit/5
         public async Task<IActionResult> Edit(Guid? id)
         {
@@ -77,6 +81,7 @@ namespace DeviceManagement_WebApp.Controllers
             return View(category);
         }
 
+        // Edit Category details based on CategoryID
         // POST: Categories/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -106,6 +111,7 @@ namespace DeviceManagement_WebApp.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        // Get and display Category that will be deleted based on CategoryID 
         // GET: Categories/Delete/5
         public async Task<IActionResult> Delete(Guid? id)
         {
@@ -123,6 +129,7 @@ namespace DeviceManagement_WebApp.Controllers
             return View(category);
         }
 
+        // Delete Category based on CategoryID
         // POST: Categories/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -132,6 +139,7 @@ namespace DeviceManagement_WebApp.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        // Check whether the inserted id exist in the Category table 
         private bool CategoryExists(Guid id)
         {
             return _categoryRepository.Exists(id);
