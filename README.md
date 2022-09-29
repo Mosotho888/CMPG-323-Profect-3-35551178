@@ -10,7 +10,7 @@
 ## Categories
 
 ![Screenshot 2022-09-29 121746](https://user-images.githubusercontent.com/80751804/193006358-cda6a40b-97fb-40d2-86d1-00b9df781a43.png)
--> press the 1(+ icon) to create a device. \
+-> press the 1(+ icon) to create a category. \
 -> press the 2(pen icon) to edit the record. \
 -> press the 3(eye icon) to view the record. \
 -> press the 4(bin icon) to view the record to be deleted. \
@@ -34,7 +34,7 @@
 ## Zones
 
 ![Screenshot 2022-09-29 121647](https://user-images.githubusercontent.com/80751804/193007265-83b4abd9-dc28-481b-b1de-d98ff1a0a6b7.png)
--> press the 1(+ icon) to create a device. \
+-> press the 1(+ icon) to create a zone. \
 -> press the 2(pen icon) to edit the record. \
 -> press the 3(eye icon) to view the record. \
 -> press the 4(bin icon) to view the record to be deleted. \
