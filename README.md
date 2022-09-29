@@ -7,7 +7,6 @@
 ![Screenshot 2022-09-28 232432](https://user-images.githubusercontent.com/80751804/193009684-2ad8215d-85dd-432f-842e-0ee5c06108fc.png)
 -> click the "Forgot your password?" if the user forgot the password.
 ![Screenshot 2022-09-29 130201](https://user-images.githubusercontent.com/80751804/193015663-6218532e-bd16-49f7-9fbd-871631404125.png)
-![Screenshot 2022-09-29 130201](https://user-images.githubusercontent.com/80751804/193015759-fbbb855a-3173-4627-82c6-34a91304a944.png)
 -> Follow the neccessary steps sent via email to create a new password
 
 ## Categories
